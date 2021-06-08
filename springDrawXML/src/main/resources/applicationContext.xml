@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--
+    <bean id="myPoint" class="ru.specialist.Point">
+        <constructor-arg value="100"/>
+        <constructor-arg value="200"/>
+    </bean>
+
+    <bean id="myCircle" class="ru.specialist.Circle">
+    <property name = "r" value="300"/>
+    </bean>
+    -->
+
+    <bean id="myPoint"
+          class="ru.specialist.Point"
+          scope="prototype">
+        <constructor-arg value="100"/>
+        <constructor-arg value="200"/>
+    </bean>
+
+    <bean id="myCircle"
+          class="ru.specialist.Circle"
+          scope="prototype">
+        <constructor-arg ref="myPoint"/>
+        <constructor-arg value="300"/>
+   </bean>
+
+
+    <bean id="myScene" class="ru.specialist.Scene">
+        <property name="color" value="white"/>
+        <property name="objects">
+            <list>
+                <ref bean="myCircle"/>
+                <ref bean="myPoint"/>
+                <ref bean="myCircle"/>
+            </list>
+        </property>
+    </bean>
+
+
+</beans>
