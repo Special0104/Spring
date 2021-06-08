@@ -15,7 +15,7 @@ public class Circle {
         return pt;
     }
 
-    @Value("#{myPoint}")
+    @Value("#{myPoint}") //
     public void setPt(Point pt) {
         this.pt = pt;
     }
