@@ -17,10 +17,10 @@ public class App {
         Coords cd = context.getBean("coordsRdm", Coords.class);
         Point pt = context.getBean("myPoint", Point.class);
         Circle cr = context.getBean("myCircle", Circle.class);
-        cd.draw();
+
         pt.draw();
         cr.draw();
-
+        cd.draw();
 
         //context.close();
     }
