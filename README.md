@@ -1,1 +1,1 @@
-# Учебные примеры применения возможностей фреймворка Spring (Bean, annotation, Hibernate)
+# Учебные примеры применения возможностей фреймворка Spring (Bean, Annotation, Hibernate)
